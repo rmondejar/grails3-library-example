@@ -8,6 +8,7 @@
 
 # default HSQL database files for production mode
 /prodDb.*
+*.h2.db
 
 # general HSQL database files
 *Db.properties
@@ -31,3 +32,9 @@
 
 # "temporary" build files
 /target
+/build
+.gradle
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+.DS_Store
