@@ -77,8 +77,12 @@ grails:
                 className: 'auth.Role'
             controllerAnnotations:
                 staticRules:
-                    '/login/denied': ['permitAll']
-                    '/dbconsole/**': ['permitAll']
+                    '/error':           ['permitAll']
+                    '/assets/**':       ['permitAll']
+                    '/**/js/**':        ['permitAll']
+                    '/**/css/**':       ['permitAll']
+                    '/**/images/**':    ['permitAll']
+                    '/**/favicon.ico':  ['permitAll']
                     '/**': ["hasAnyRole('ROLE_ADMIN')"]
 ---
 hibernate:
