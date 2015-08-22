@@ -76,43 +76,27 @@
 <body>
 <div id='login'>
     <div class='inner'>
-        <div class='fheader'><g:message code="springSecurity.login.header"/></div>
+        <div class='fheader'>Reset your password</div>
 
         <g:if test='${flash.message}'>
             <div class='login_message'>${flash.message}</div>
         </g:if>
 
-        <form action='${postUrl}' method='POST' id='loginForm' class='cssform' autocomplete='off'>
+        <form action='reset' method="POST" id='loginForm' class='cssform' autocomplete='off'>
             <p>
                 <label for='username'>Email:</label>
-                <input type='text' class='text_' name='j_username' id='username' value="${j_username}" required=""/>
+                <input type="text" class="form-control" placeholder="Username or email" name="username" value="${username}" required=""">
             </p>
 
             <p>
-                <label for='password'><g:message code="springSecurity.login.password.label"/>:</label>
-                <input type='password' class='text_' name='j_password' id='password' required=""/>
-            </p>
-
-            <p id="remember_me_holder">
-                <input type='checkbox' class='chk' name='${rememberMeParameter}' id='remember_me' <g:if test='${hasCookie}'>checked='checked'</g:if>/>
-                <label for='remember_me'><g:message code="springSecurity.login.remember.me.label"/></label>
-
-
-            </p>
-
-            <p class="text-align: center">
-                <g:link controller="user" action="lost" params="[username:j_username]" title="lost password">Lost password?</g:link>
-            </p>
-
-            <p>
-                <input type='submit' id="submit" value='${message(code: "springSecurity.login.button")}'/>
+                <input type='submit' id="submit" value='Send reset email'/>
             </p>
 
         </form>
 
 
     </div>
-    <p class="text-align: center">Need an account? <g:link controller="user" action="signUp"> Sign up free</g:link></p>
+    <p class="text-align: center">Back to <g:link controller="login" action="auth"> Sign in</g:link></p>
 </div>
 <script type='text/javascript'>
     (function() {

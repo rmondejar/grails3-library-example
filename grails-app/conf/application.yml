@@ -83,7 +83,17 @@ grails:
                     '/**/css/**':       ['permitAll']
                     '/**/images/**':    ['permitAll']
                     '/**/favicon.ico':  ['permitAll']
-                    '/**': ["hasAnyRole('ROLE_ADMIN')"]
+                    '/user/**':       ['permitAll']
+                    '/**': ["hasAnyRole('ROLE_USER, ROLE_ADMIN')"]
+---
+grails:
+    mail:
+        host: 'smtp.gmail.com'
+        port: 465
+        username: "youracount@gmail.com"
+        password: "yourpassword"
+        props: ["mail.smtp.auth":"true","mail.smtp.socketFactory.port":"465","mail.smtp.socketFactory.class":"javax.net.ssl.SSLSocketFactory","mail.smtp.socketFactory.fallback":"false"]
+
 ---
 hibernate:
     cache:

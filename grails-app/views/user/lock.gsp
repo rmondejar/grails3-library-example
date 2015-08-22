@@ -76,17 +76,17 @@
 <body>
 <div id='login'>
     <div class='inner'>
-        <div class='fheader'><g:message code="springSecurity.login.header"/></div>
+        <div class='fheader'>Welcome Back - ${j_username}</div>
 
         <g:if test='${flash.message}'>
             <div class='login_message'>${flash.message}</div>
         </g:if>
 
         <form action='${postUrl}' method='POST' id='loginForm' class='cssform' autocomplete='off'>
-            <p>
-                <label for='username'>Email:</label>
-                <input type='text' class='text_' name='j_username' id='username' value="${j_username}" required=""/>
-            </p>
+
+
+            <input type='hidden' class='text_' name='j_username' id='username' value="${j_username}"/>
+
 
             <p>
                 <label for='password'><g:message code="springSecurity.login.password.label"/>:</label>
@@ -101,18 +101,18 @@
             </p>
 
             <p class="text-align: center">
-                <g:link controller="user" action="lost" params="[username:j_username]" title="lost password">Lost password?</g:link>
+                <g:link controller="user" action="lost" title="lost password">Lost password?</g:link>
             </p>
 
             <p>
-                <input type='submit' id="submit" value='${message(code: "springSecurity.login.button")}'/>
+                <input type='submit' id="submit" value='Unlock'/>
             </p>
 
         </form>
 
 
     </div>
-    <p class="text-align: center">Need an account? <g:link controller="user" action="signUp"> Sign up free</g:link></p>
+
 </div>
 <script type='text/javascript'>
     (function() {
