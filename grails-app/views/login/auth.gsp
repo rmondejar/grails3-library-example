@@ -101,7 +101,7 @@
             </p>
 
             <p class="text-align: center">
-                <g:link controller="user" action="lost" params="[username:j_username]" title="lost password">Lost password?</g:link>
+                <g:link controller="auth" action="lost" params="[username:j_username]" title="lost password">Lost password?</g:link>
             </p>
 
             <p>
@@ -112,7 +112,7 @@
 
 
     </div>
-    <p class="text-align: center">Need an account? <g:link controller="user" action="signUp"> Sign up free</g:link></p>
+    <p class="text-align: center">Need an account? <g:link controller="auth" action="signUp"> Sign up free</g:link></p>
 </div>
 <script type='text/javascript'>
     (function() {

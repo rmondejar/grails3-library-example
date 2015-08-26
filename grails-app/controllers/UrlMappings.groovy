@@ -7,9 +7,9 @@ class UrlMappings {
             }
         }
 
-        //"/"(view:"/index")
         "/"(controller:"book")
         "500"(view:'/error')
         "404"(view:'/notFound')
+
     }
 }

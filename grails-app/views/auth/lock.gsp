@@ -101,7 +101,7 @@
             </p>
 
             <p class="text-align: center">
-                <g:link controller="user" action="lost" title="lost password">Lost password?</g:link>
+                <g:link controller="auth" action="lost" title="lost password">Lost password?</g:link>
             </p>
 
             <p>

@@ -1,6 +1,6 @@
 package auth
 
-class UserController {
+class AuthController {
 
     def springSecurityService
     def mailService

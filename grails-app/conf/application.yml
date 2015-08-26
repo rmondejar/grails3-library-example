@@ -83,7 +83,8 @@ grails:
                     '/**/css/**':       ['permitAll']
                     '/**/images/**':    ['permitAll']
                     '/**/favicon.ico':  ['permitAll']
-                    '/user/**':       ['permitAll']
+                    '/auth/**':       ['permitAll']
+                    '/user/**': ["hasAnyRole('ROLE_ADMIN')"]
                     '/**': ["hasAnyRole('ROLE_USER, ROLE_ADMIN')"]
 ---
 grails:
