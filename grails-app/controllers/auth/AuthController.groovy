@@ -45,6 +45,11 @@ class AuthController {
 
 
     def lock() {
+
+        if (!springSecurityService.currentUser) {
+            redirect controller:"login", action: "auth"
+        }
+
         def postUrl = request.contextPath + springSecurityService.securityConfig.apf.filterProcessesUrl
         [j_username: springSecurityService.currentUser, postUrl : postUrl]
     }

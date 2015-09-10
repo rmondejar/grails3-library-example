@@ -39,8 +39,7 @@
 /.idea/libraries
 .DS_Store
 
-.idea/uiDesigner.xml
-
-grails3-library-example.iml
-
-grails3-library-example.iml
+# Intellij
+.idea/
+*.iml
+*.iws
