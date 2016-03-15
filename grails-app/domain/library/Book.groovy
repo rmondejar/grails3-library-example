@@ -1,7 +1,6 @@
 package library
 
 class Book {
-
     static def genres = ['Drama', 'Romance', 'Terror', 'SciFi', 'Comedy']
 
     String title
@@ -24,7 +23,7 @@ class Book {
 
     static constraints = {
         title maxSize: 150, blank: false, nullable: false
-        genre blank: false, nullable: false, inList:genres
+        genre blank: false, nullable: false, inList: Book.genres
         releaseDate max: new Date()
     }
 }

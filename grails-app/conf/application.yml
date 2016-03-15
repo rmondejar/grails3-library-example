@@ -77,15 +77,24 @@ grails:
                 className: 'auth.Role'
             controllerAnnotations:
                 staticRules:
-                    '/error':           ['permitAll']
-                    '/assets/**':       ['permitAll']
-                    '/**/js/**':        ['permitAll']
-                    '/**/css/**':       ['permitAll']
-                    '/**/images/**':    ['permitAll']
-                    '/**/favicon.ico':  ['permitAll']
-                    '/auth/**':       ['permitAll']
-                    '/user/**': ["hasAnyRole('ROLE_ADMIN')"]
-                    '/**': ["hasAnyRole('ROLE_USER, ROLE_ADMIN')"]
+                  - pattern: '/error'
+                    access: ['permitAll']
+                  - pattern: '/assets/**'
+                    access: ['permitAll']
+                  - pattern: '/**/js/**'
+                    access: ['permitAll']
+                  - pattern: '/**/css/**'
+                    access: ['permitAll']
+                  - pattern: '/**/images/**'
+                    access: ['permitAll']
+                  - pattern: '/**/favicon.ico'
+                    access: ['permitAll']
+                  - pattern: '/auth/**'
+                    access: ['permitAll']
+                  - pattern: '/user/**'
+                    access: ['ROLE_ADMIN']
+                  - pattern: '/**'
+                    access: ['ROLE_USER', 'ROLE_ADMIN']
 ---
 grails:
     mail:

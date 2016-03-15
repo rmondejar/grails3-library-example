@@ -76,7 +76,7 @@
 <body>
 <div id='login'>
     <div class='inner'>
-        <div class='fheader'>Welcome Back - ${j_username}</div>
+        <div class='fheader'>Welcome Back - ${username}</div>
 
         <g:if test='${flash.message}'>
             <div class='login_message'>${flash.message}</div>
@@ -85,12 +85,12 @@
         <form action='${postUrl}' method='POST' id='loginForm' class='cssform' autocomplete='off'>
 
 
-            <input type='hidden' class='text_' name='j_username' id='username' value="${j_username}"/>
+            <input type='hidden' class='text_' name='username' id='username' value="${username}"/>
 
 
             <p>
                 <label for='password'><g:message code="springSecurity.login.password.label"/>:</label>
-                <input type='password' class='text_' name='j_password' id='password' required=""/>
+                <input type='password' class='text_' name='password' id='password' required=""/>
             </p>
 
             <p id="remember_me_holder">
@@ -116,7 +116,7 @@
 </div>
 <script type='text/javascript'>
     (function() {
-        document.forms['loginForm'].elements['j_username'].focus();
+        document.forms['loginForm'].elements['username'].focus();
     })();
 </script>
 </body>

@@ -1,7 +1,7 @@
 # grails3-library-example
 Based on Grails documentation recurrent example : Library (Books & Author)
 
-Grails 3.0.4 + Spring Security Plugin 3.0.0 M1 + Mail Plugin 2.0.0.RC2
+Grails 3.1.3 + Spring Security Plugin 3.0.3 + Mail Plugin 2.0.0.RC2
 
 1) Grails application running at http://localhost:8080/library in environment: development
 
