@@ -39,7 +39,7 @@ class AuthController {
 
         //redirect signIn
         flash.message = message(code: "user.register.successful", args:[newUser.username])
-        redirect controller:"login", action: "auth", params: [ j_username: params.username ]
+        redirect controller:"login", action: "auth", params: [ username: params.username ]
 
     }
 
@@ -51,7 +51,7 @@ class AuthController {
         }
 
         def postUrl = request.contextPath + springSecurityService.securityConfig.apf.filterProcessesUrl
-        [j_username: springSecurityService.currentUser, postUrl : postUrl]
+        [username: springSecurityService.currentUser, postUrl : postUrl]
     }
 
     def lost() {

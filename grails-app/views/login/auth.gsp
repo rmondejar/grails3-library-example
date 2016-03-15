@@ -85,12 +85,12 @@
         <form action='${postUrl}' method='POST' id='loginForm' class='cssform' autocomplete='off'>
             <p>
                 <label for='username'>Email:</label>
-                <input type='text' class='text_' name='j_username' id='username' value="${j_username}" required=""/>
+                <input type='text' class='text_' name='username' id='username' value="${username}" required=""/>
             </p>
 
             <p>
                 <label for='password'><g:message code="springSecurity.login.password.label"/>:</label>
-                <input type='password' class='text_' name='j_password' id='password' required=""/>
+                <input type='password' class='text_' name='password' id='password' required=""/>
             </p>
 
             <p id="remember_me_holder">
@@ -101,7 +101,7 @@
             </p>
 
             <p class="text-align: center">
-                <g:link controller="auth" action="lost" params="[username:j_username]" title="lost password">Lost password?</g:link>
+                <g:link controller="auth" action="lost" params="[username:username]" title="lost password">Lost password?</g:link>
             </p>
 
             <p>
@@ -116,7 +116,7 @@
 </div>
 <script type='text/javascript'>
     (function() {
-        document.forms['loginForm'].elements['j_username'].focus();
+        document.forms['loginForm'].elements['username'].focus();
     })();
 </script>
 </body>
